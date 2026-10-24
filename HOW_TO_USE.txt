@@ -1,0 +1,60 @@
+HOW TO USE: chord-progression-recommender
+==================================================
+
+PURPOSE
+  Mines 31,032 real-world song chord sequences from the Lakh MIDI dataset on
+  Drive B to recommend mathematically and musically proven chord transitions,
+  passing chords, and full progressions backed by statistical song analysis.
+
+CAPABILITIES
+  - Scans 31k songs to find the most frequent chords that follow any given chord
+  - Categorizes suggestions into Strong Resolutions, Modal Colors, and Surprise Turnarounds
+  - Provides Roman numeral functional analysis and voice-leading explanations
+  - Breaks down specific keyboard/guitar notes and chord spellings for every recommended chord
+  - Cites real famous songs from the database that feature the exact chord movement
+  - Discovers full songs matching an input multi-chord sequence (e.g., Am -> F -> C -> G)
+  - Connects directly with ableton-midi-chord-builder for 1-click MIDI progression clip export
+
+USE CASES
+  - You have a starting chord or two and are stuck on what chord should come next
+  - You want fresh harmonic ideas for a verse, chorus, bridge, or intro
+  - You want to find real-world songs that share a specific chord progression
+  - You need to break out of routine 4-chord loops with modal interchange or secondary dominants
+  - You want to verify whether a chord movement has strong empirical precedent in hit music
+
+IDEAS
+  - Use with reharmonization-engine to upgrade a pop progression with jazz or neo-soul chords
+  - Search for your favorite obscure chord sequence to see which artists wrote songs with it
+  - Generate an Ableton MIDI clip directly from the top recommended progression
+  - Discover era-specific harmonic trends by pairing with song-era-harmony-analyzer
+  - Build tension in pre-choruses by finding the most dramatic surprise turnaround chords
+
+PROMPTS YOU CAN PASTE
+  I'm writing a verse in D minor starting on Dm to Gm. What chord should come next?
+
+  What chords go well after Cmaj7?
+
+  Recommend a chord progression for a melancholic R&B track in F minor.
+
+  Find songs in our database that use the progression Am - F - C - G.
+
+  What are some unexpected turnaround chords for a bridge after Em7?
+
+EXAMPLE FLOW
+  You:   I have chords Dm to Gm. What should come next?
+  Model: [Mines 31,032 songs in milliseconds]
+         Top recommendations:
+         1. C (Classic ii - V - I resolution, 28% of transitions)
+            - Example: Daniel Balavoine, "Sauver L'Amour"
+            - Voicing: C - E - G (Root position) or C - G - C - E (Open piano)
+         2. Bb (Dramatic bVI deceptive lift, 18%)
+            - Example: Verona, "La Musica"
+         3. Eb7#9 (Spicy tritone passing turnaround, 9%)
+         [Provides chord notes, Roman numerals, and voice-leading analysis]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Parse the starting chord or chord sequence from your prompt.
+  2. Query `recommend_chords.py` to calculate the top empirical harmonic transitions.
+  3. Categorize next steps into Strong Resolution, Modal/Deceptive Color, and Surprise Turnaround.
+  4. Provide Roman numeral analysis, note spelling/voicings, and 2 real song references.
+  5. Offer to export the selected progression into a MIDI clip for Ableton Live.
